@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>APOD</title>
+</head>
+<body>
+    <div style="text-align:justify; margin:auto; max-width: 800px;">
+        <h1 th:text="${image.title}">Image Page</h1>
+        <p th:text="${image.date}">Image Date</p>
+        <p th:text="${image.explanation}">Image description</p>
+
+        <image th:src="@{${image.url}}" alt="Astronomy Picture of the Day - NASA" style="max-width: 600px;"></image>
+        <p th:text="${image.copyright}"></p>
+    </div>
+</body>
+</html>
