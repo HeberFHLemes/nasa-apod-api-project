@@ -4,9 +4,9 @@
 
 ### Description
 
-There are only two paths, both via GET requests: 
+There are two paths, both via GET requests: 
 - ```/```:
-The "home" page, showing the to the next path.
+The "home" page, showing the link to the next path.
 
 - ```/apod```:
 The "main" page, where the content appears. When reached, it is made a GET request to the API, and renders the page according to the content returned.
@@ -21,7 +21,7 @@ If a request is made and 24 hours already passed after the first time is was res
 - Practice coding with the Spring Framework;
 - Learn DTOs usage;
 - Practice Controllers mapping methods;
-- Practice Thymeleaf for dynamic HTML rendering;
+- Using Thymeleaf for dynamic HTML rendering;
 - Using external APIs;
 - Using Spring Web's functionalities;
 
@@ -34,7 +34,18 @@ If a request is made and 24 hours already passed after the first time is was res
 
 <hr>
 
-### See NASA's Open APIs at [https://api.nasa.gov/](https://api.nasa.gov/)
+### Screenshots
+
+- GET ```/```
+![](screenshots/home.png)
+
+
+- GET ```/apod```
+![](screenshots/apod.png)
+
+<hr>
+
+#### See NASA's Open APIs at [https://api.nasa.gov/](https://api.nasa.gov/)
 
 <hr>
 
