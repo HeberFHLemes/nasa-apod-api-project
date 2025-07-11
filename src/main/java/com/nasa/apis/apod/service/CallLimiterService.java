@@ -13,8 +13,12 @@ import java.time.format.DateTimeFormatter;
 @Component
 public class CallLimiterService {
 
+    // Controls the count of calls made since the last "reset"
     private static final String COUNTER_FILE = "./data/count.txt";
+
+    // Keeps the LocalDateTime of the last reset made (at least 24hrs between)
     private static final String RESET_FILE = "./data/last-reset.txt";
+    
     private static final int MAX_CALLS = 30;
 
     private int callCount;
@@ -22,7 +26,6 @@ public class CallLimiterService {
     private LocalDateTime lastReset;
     private final DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
 
-    // Control the max number of calls.
     public CallLimiterService() {
         ensureFilesExist();
         this.lastReset = loadLastReset();
@@ -81,6 +84,7 @@ public class CallLimiterService {
         return null;
     }
 
+    // Updates the count.txt...
     private void saveCallCount() {
         try {
             Files.writeString(Paths.get(COUNTER_FILE), String.valueOf(callCount));
@@ -89,6 +93,7 @@ public class CallLimiterService {
         }
     }
 
+    // Updates the last-reset.txt...
     private void saveLastReset() {
         try {
             Files.writeString(Paths.get(RESET_FILE), lastReset.format(formatter));
@@ -97,6 +102,7 @@ public class CallLimiterService {
         }
     }
 
+    // If the files does not exists, it creates them...
     private void ensureFilesExist() {
         try {
             Path counterPath = Paths.get(COUNTER_FILE);
