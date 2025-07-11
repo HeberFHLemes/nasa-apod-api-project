@@ -1,0 +1,41 @@
+#welcomeMessageDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    max-width: 40%;
+    margin: auto;
+    margin-top: 40vh;
+    border: 2px solid;
+    border-radius: 8px;
+    box-shadow: 5px 10px 10px darkblue;
+}
+
+#welcomeMessage {
+    font-size: 1.8rem;
+}
+
+#welcomeMessageDiv > h1 {
+    font-family: "Goudy Bookletter 1911", sans-serif;
+}
+
+#errorMessage {
+    color: red;
+}
+
+#apodDiv {
+    margin: auto;
+    max-width: 800px;
+}
+
+#apodImage {
+    max-width: 100%;
+}
+
+#imageExplanation {
+    text-align: justify;
+}
+
+#imageTitle, #imageDate {
+    text-align: center;
+}

@@ -19,7 +19,7 @@ public class CallLimiterService {
     // Keeps the LocalDateTime of the last reset made (at least 24hrs between)
     private static final String RESET_FILE = "./data/last-reset.txt";
     
-    private static final int MAX_CALLS = 30;
+    private static final int MAX_CALLS = 50;
 
     private int callCount;
 

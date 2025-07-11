@@ -2,9 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
     <title>Error</title>
 </head>
 <body>
-  <p th:if="${error}" th:text="${error}" style="color:red;"></p>
+  <p id="errorMessage" th:if="${error}" th:text="${error}"></p>
 </body>
 </html>

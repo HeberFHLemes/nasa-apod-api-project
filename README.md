@@ -37,11 +37,11 @@ If a request is made and 24 hours already passed after the first time is was res
 ### Screenshots
 
 - GET ```/```
-![](screenshots/home.png)
+![](screenshots/home_updated.png)
 
 
 - GET ```/apod```
-![](screenshots/apod.png)
+![](screenshots/apod_20250711.png)
 
 <hr>
 
