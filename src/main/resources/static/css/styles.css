@@ -42,19 +42,19 @@
 }
 
 @keyframes glow {
-0%   {box-shadow: 4px 4px 12px #0d1b2a;}
-25%  {box-shadow: 4px 4px 12px #1e3a8a;}
-50%  {box-shadow: 4px 4px 12px #facc15;}
-75%  {box-shadow: 4px 4px 12px #3b82f6;}
-100% {box-shadow: 4px 4px 12px #0d1b2a;}
+    0%   {box-shadow: 4px 4px 12px #0d1b2a;}
+    25%  {box-shadow: 4px 4px 12px #1e3a8a;}
+    50%  {box-shadow: 4px 4px 12px #facc15;}
+    75%  {box-shadow: 4px 4px 12px #3b82f6;}
+    100% {box-shadow: 4px 4px 12px #0d1b2a;}
 }
 
 @keyframes change-color {
-0%   {color: #0d1b2a;}
-25%  {color: #1e3a8a;}
-50%  {color: #facc15;}
-75%  {color: #3b82f6;}
-100% {color: #0d1b2a;}
+    0%   {color: #0d1b2a;}
+    25%  {color: #1e3a8a;}
+    50%  {color: #facc15;}
+    75%  {color: #3b82f6;}
+    100% {color: #0d1b2a;}
 } 
 
 #errorMessage {
