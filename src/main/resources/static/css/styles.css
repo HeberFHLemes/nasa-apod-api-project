@@ -3,21 +3,59 @@
     justify-content: center;
     align-items: center;
     height: auto;
-    max-width: 40%;
+    max-width: 100%;
     margin: auto;
     margin-top: 40vh;
     border: 2px solid;
     border-radius: 8px;
     box-shadow: 5px 10px 10px darkblue;
+    animation: glow 10s ease-in-out infinite, change-color 10s ease-in-out infinite;
+}
+
+#redirectApod {
+    animation: change-color 10s ease-in-out infinite;
+}
+
+#redirectApod:hover {
+    text-decoration: underline;
+    color: darkblue;
 }
 
 #welcomeMessage {
-    font-size: 1.8rem;
+    font-size: 5vw;
+    font-family: Helvetica, sans-serif;
 }
 
-#welcomeMessageDiv > h1 {
-    font-family: "Goudy Bookletter 1911", sans-serif;
+@media screen and (min-width: 301px) {
+    #welcomeMessage { font-size: 4vw; }
+    #welcomeMessageDiv { max-width: 80%; }
 }
+
+@media screen and (min-width: 481px) {
+    #welcomeMessage { font-size: 3vw; }
+    #welcomeMessageDiv { max-width: 60%; }
+}
+
+@media screen and (min-width: 601px) {
+    #welcomeMessage { font-size: 2vw; }
+    #welcomeMessageDiv { max-width: 40%; }
+}
+
+@keyframes glow {
+0%   {box-shadow: 4px 4px 12px #0d1b2a;}
+25%  {box-shadow: 4px 4px 12px #1e3a8a;}
+50%  {box-shadow: 4px 4px 12px #facc15;}
+75%  {box-shadow: 4px 4px 12px #3b82f6;}
+100% {box-shadow: 4px 4px 12px #0d1b2a;}
+}
+
+@keyframes change-color {
+0%   {color: #0d1b2a;}
+25%  {color: #1e3a8a;}
+50%  {color: #facc15;}
+75%  {color: #3b82f6;}
+100% {color: #0d1b2a;}
+} 
 
 #errorMessage {
     color: red;
